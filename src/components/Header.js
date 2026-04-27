@@ -4,11 +4,11 @@ export function Header() {
       <div class="container">
         <a href="/" class="nav-home">Home</a>
         <nav class="nav-right">
-          <a href="/about.html">About</a>
+          <a href="/about">About</a>
           <span class="nav-sep">|</span>
-          <a href="/gigs.html">Gigs</a>
+          <a href="/gigs">Gigs</a>
           <span class="nav-sep">|</span>
-          <a href="/contact.html">Contact</a>
+          <a href="/contact">Contact</a>
           <span class="nav-sep">|</span>
           <a href="https://www.instagram.com/lemon.eye.zeband/" target="_blank" rel="noopener">Instagram</a>
           <span class="nav-sep">|</span>
@@ -20,9 +20,9 @@ export function Header() {
 
     <nav class="mobile-menu">
       <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/gigs.html">Gigs</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/gigs">Gigs</a>
+      <a href="/contact">Contact</a>
       <a href="https://www.instagram.com/lemon.eye.zeband/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.youtube.com/@lemon.eye.zeband" target="_blank" rel="noopener">YouTube</a>
     </nav>

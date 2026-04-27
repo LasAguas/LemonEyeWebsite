@@ -9,14 +9,14 @@ const contacts = [
     email: 'contact@lemoneye.band',
   },
   {
-    label: 'Bookings',
-    note: 'Live shows, festivals, and tour dates.',
-    email: 'contact@lemoneye.band',
+    label: 'Marketing',
+    note: 'Interviews, videos, and other promotional materials.',
+    email: 'contact@lasaguasproductions.com',
   },
   {
     label: 'Press & EPK',
     note: 'High-res photos, bio, and press materials.',
-    href: '/Lemon Eye EPK ENG.pdf',
+    href: '/epk.html',
     cta: 'Open press kit',
   },
 ]

@@ -12,6 +12,7 @@ export default defineConfig({
         about: resolve(__dirname, 'about.html'),
         contact: resolve(__dirname, 'contact.html'),
         gigs: resolve(__dirname, 'gigs.html'),
+        socials: resolve(__dirname, 'socials.html'),
       },
     },
   },

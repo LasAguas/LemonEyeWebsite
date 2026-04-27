@@ -1,9 +1,12 @@
+import { NewsletterForm } from './NewsletterForm.js'
+
 export function Hero() {
   return `
     <section class="hero">
-      <div class="hero-logo">
-        <img src="/images/Lemon-Eye-Honey.png" alt="Lemon Eye" class="logo-img">
-      </div>
+      ${NewsletterForm({ wrapperClass: 'hero-form' })}
+    </section>
+    <section class="hero-mobile-form">
+      ${NewsletterForm({ wrapperClass: 'mobile-newsletter' })}
     </section>
   `
 }

@@ -766,6 +766,50 @@ img { max-width: 100%; height: auto; display: block; }
   transform: none;
 }
 
+.listen-expand { display: flex; flex-direction: column; }
+
+.listen-expand__toggle {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.listen-expand__chev {
+  transition: transform 0.25s ease;
+  font-size: 0.9rem;
+}
+
+.listen-expand[data-expanded="true"] .listen-expand__chev {
+  transform: rotate(180deg);
+}
+
+.listen-expand__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(25, 30, 33, 0.15);
+}
+
+.listen-expand__panel[hidden] {
+  display: none;
+}
+
+.gig-button--platform {
+  background: transparent;
+  color: #191e21;
+  border: 1px solid rgba(25, 30, 33, 0.3);
+  justify-content: space-between;
+}
+
+.gig-button--platform:hover {
+  background: #191e21;
+  color: #f2eae7;
+}
+
 .gig-empty {
   text-align: center;
   padding: 3rem 1rem;

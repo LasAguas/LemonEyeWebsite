@@ -1,26 +1,7 @@
 import './styles.css'
 import { Header, initMobileMenu } from './components/Header.js'
 import { Footer } from './components/Footer.js'
-
-// Upcoming shows. Add new entries to the top of the array.
-const gigs = [
-  {
-    date: '2026-05-04',
-    dateLabel: { day: '04', month: 'May', year: '2026' },
-    title: 'Efro — EP Release Show',
-    role: 'Supporting Efro · with LJIA',
-    venue: 'Lark Berlin',
-    city: 'Berlin, DE',
-    doors: '19:00',
-    show: '19:30',
-    description:
-      'Release show for Efro\'s new EP "Year of Yearning". Lemon Eye opens the night with a short set alongside LJIA before Efro\'s headline.',
-    ticketUrl: 'https://lasaguasproductions.com/events/efro-at-lark',
-    ticketLabel: 'Get Tickets',
-  },
-]
-
-const past = [] // populate later if you want a "past shows" section
+import { gigs, past } from './data/gigs.js'
 
 function formatDate(iso) {
   return new Date(iso + 'T00:00:00').toLocaleDateString('en-GB', {

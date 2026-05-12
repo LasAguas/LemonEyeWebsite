@@ -2,22 +2,7 @@ import './styles.css'
 import { Header, initMobileMenu } from './components/Header.js'
 import { Footer } from './components/Footer.js'
 
-const gigs = [
-  {
-    date: '2026-05-04',
-    dateLabel: { day: '04', month: 'May', year: '2026' },
-    title: 'Efro — EP Release Show',
-    role: 'Supporting Efro · with LJIA',
-    venue: 'Lark Berlin',
-    city: 'Berlin, DE',
-    doors: '19:00',
-    show: '19:30',
-    description:
-      'Release show for Efro\'s new EP "Year of Yearning". Lemon Eye opens the night with a short set alongside LJIA before Efro\'s headline.',
-    ticketUrl: 'https://lasaguasproductions.com/events/efro-at-lark',
-    ticketLabel: 'Get Tickets',
-  },
-]
+const gigs = []
 
 const outOfReachPlatforms = [
   { label: 'Apple Music', url: 'https://music.apple.com/gb/album/out-of-reach-single/1892339999' },
@@ -76,11 +61,7 @@ const gigHTML = nextGig ? `
       }
     </div>
   </article>
-` : `
-  <div class="gig-empty">
-    <p>No shows on the calendar right now.</p>
-  </div>
-`
+` : ''
 
 const outOfReachHTML = `
   <div class="listen-expand" data-expanded="false">
@@ -106,12 +87,9 @@ const linksHTML = links.map(l => `
 document.querySelector('#app').innerHTML = `
   ${Header()}
 
-  <section class="gigs-page" style="padding-top:5rem;">
-    <div class="gigs-list">
-      ${gigHTML}
-    </div>
-
-    <div class="socials-links" style="display:flex; flex-direction:column; gap:1.25rem; margin-top:4rem;">
+  <section class="gigs-page" style="min-height:calc(100vh - 8rem); display:flex; align-items:center; justify-content:center; padding-top:5rem;">
+    ${gigHTML ? `<div class="gigs-list">${gigHTML}</div>` : ''}
+    <div class="socials-links" style="display:flex; flex-direction:column; gap:1.25rem;">
       ${outOfReachHTML}
       ${linksHTML}
     </div>

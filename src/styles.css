@@ -133,6 +133,16 @@ img { max-width: 100%; height: auto; display: block; }
   margin-left: 4rem;
 }
 
+/* ========== Hero Newsletter Form ========== */
+.hero-form {
+  margin-left: 4rem;
+  width: calc(33.333vw - 4rem);
+}
+
+.hero-form-mobile {
+  display: none;
+}
+
 .hero-event {
   display: flex;
   flex-direction: column;
@@ -972,6 +982,16 @@ img { max-width: 100%; height: auto; display: block; }
     padding: 0.65rem 1.1rem;
     font-size: 0.72rem;
     margin-top: 0.1rem;
+  }
+
+  .hero-form--desktop { display: none; }
+  .hero-form-mobile {
+    display: block;
+    padding: 3rem 2rem;
+  }
+  .hero-form-mobile .hero-form {
+    margin-left: 0;
+    width: 100%;
   }
 
   .newsletter-section { padding: 3rem 0; }

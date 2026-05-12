@@ -15,10 +15,10 @@ export function Hero() {
 
   return `
     <section class="hero">
-      ${NewsletterForm({ wrapperClass: 'hero-form' })}
+      ${NewsletterForm({ wrapperClass: 'hero-form hero-form--desktop' })}
     </section>
-    <section class="hero-mobile-form">
-      ${NewsletterForm({ wrapperClass: 'mobile-newsletter' })}
+    <section class="hero-form-mobile">
+      ${NewsletterForm({ wrapperClass: 'hero-form' })}
     </section>
   `
 }

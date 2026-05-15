@@ -18,8 +18,8 @@ const links = [
     url: 'http://eepurl.com/jomA7I',
   },
   {
-    label: 'Listen to "Honey"',
-    url: 'https://distrokid.com/hyperfollow/lemoneye/honey?utm_campaign=website&utm_medium=Email+&utm_source=SendGrid',
+    label: 'Indie Berlin Review',
+    url: 'https://www.indie.berlin/review-lemon-eye/',
   },
 ]
 

@@ -714,6 +714,21 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 8rem 4rem 5rem;
 }
 
+/* ========== Socials Page ========== */
+.socials-page {
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.socials-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .gigs-list {
   display: flex;
   flex-direction: column;
@@ -865,13 +880,13 @@ img { max-width: 100%; height: auto; display: block; }
   transform: none;
 }
 
-.listen-expand { display: flex; flex-direction: column; }
+.listen-expand { display: flex; flex-direction: column; width: 100%; }
 
 .listen-expand__toggle {
   border: none;
   cursor: pointer;
   font-family: inherit;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
@@ -898,15 +913,15 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .gig-button--platform {
-  background: transparent;
+  background: #f2eae7;
   color: #191e21;
-  border: 1px solid rgba(25, 30, 33, 0.3);
-  justify-content: space-between;
+  border: none;
+  justify-content: center;
 }
 
 .gig-button--platform:hover {
-  background: #191e21;
-  color: #f2eae7;
+  background: #e8ddd9;
+  color: #191e21;
 }
 
 .gig-empty {
@@ -1060,6 +1075,29 @@ img { max-width: 100%; height: auto; display: block; }
   .gig-date__year { margin-top: 0; margin-left: auto; }
 
   .gig-button { width: 100%; justify-content: center; }
+
+  /* Socials page mobile hero */
+  .socials-page {
+    display: block;
+    min-height: unset;
+    padding: 0;
+    position: relative;
+    background: url('/images/Lemon-Eye-Mobile-Hero-Section.jpg') center top / cover no-repeat;
+    aspect-ratio: 9 / 16;
+  }
+
+  .socials-page .gigs-list {
+    display: none;
+  }
+
+  .socials-links {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {

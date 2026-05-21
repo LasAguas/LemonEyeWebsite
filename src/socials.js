@@ -87,9 +87,9 @@ const linksHTML = links.map(l => `
 document.querySelector('#app').innerHTML = `
   ${Header()}
 
-  <section class="gigs-page" style="min-height:calc(100vh - 8rem); display:flex; align-items:center; justify-content:center; padding-top:5rem;">
+  <section class="socials-page">
     ${gigHTML ? `<div class="gigs-list">${gigHTML}</div>` : ''}
-    <div class="socials-links" style="display:flex; flex-direction:column; gap:1.25rem;">
+    <div class="socials-links">
       ${outOfReachHTML}
       ${linksHTML}
     </div>

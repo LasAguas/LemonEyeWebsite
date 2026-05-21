@@ -1092,7 +1092,7 @@ img { max-width: 100%; height: auto; display: block; }
 
   .socials-links {
     position: absolute;
-    top: 18%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;

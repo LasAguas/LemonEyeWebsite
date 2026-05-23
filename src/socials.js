@@ -5,21 +5,35 @@ import { Footer } from './components/Footer.js'
 const gigs = []
 
 const outOfReachPlatforms = [
+<<<<<<< Updated upstream
   { label: 'Spotify', url: 'https://open.spotify.com/album/2rCkRsHw14IPHbVmbTab5x' },
   { label: 'Apple Music', url: 'https://music.apple.com/gb/album/out-of-reach-single/1892339999' },
   { label: 'Tidal', url: 'https://tidal.com/album/514506666/u' },
   { label: 'YouTube Music', url: 'https://www.youtube.com/watch?v=V2_Sft3qiOU&list=RDV2_Sft3qiOU&start_radio=1' },
   { label: 'Deezer', url: 'https://link.deezer.com/s/337SaFfzcsYOXVH0OPDJ6' },
+=======
+  { label: 'Apple Music',  url: 'https://music.apple.com/gb/album/out-of-reach-single/1892339999', platform: 'apple_music' },
+  { label: 'Tidal',        url: 'https://tidal.com/album/514506666/u', platform: 'tidal' },
+  { label: 'YouTube Music', url: 'https://www.youtube.com/watch?v=V2_Sft3qiOU&list=RDV2_Sft3qiOU&start_radio=1', platform: 'youtube_music' },
+  { label: 'Deezer',       url: 'https://link.deezer.com/s/337SaFfzcsYOXVH0OPDJ6', platform: 'deezer' },
+  { label: 'Spotify',      url: 'https://open.spotify.com/album/2rCkRsHw14IPHbVmbTab5x', platform: 'spotify' },
+>>>>>>> Stashed changes
 ]
 
 const links = [
   {
     label: 'Mailing list',
     url: 'http://eepurl.com/jomA7I',
+    trackType: 'newsletter',
+    trackPlatform: 'mailchimp',
+    trackCategory: 'newsletter',
   },
   {
     label: 'Indie Berlin Review',
     url: 'https://www.indie.berlin/review-lemon-eye/',
+    trackType: 'other',
+    trackPlatform: null,
+    trackCategory: 'press',
   },
 ]
 
@@ -56,7 +70,10 @@ const gigHTML = nextGig ? `
     </div>
     <div class="gig-cta">
       ${nextGig.ticketUrl
-        ? `<a class="gig-button" href="${nextGig.ticketUrl}" target="_blank" rel="noopener">${nextGig.ticketLabel || 'Tickets'} &rarr;</a>`
+        ? `<a class="gig-button" href="${nextGig.ticketUrl}" target="_blank" rel="noopener"
+             data-track-type="tickets"
+             data-track-label="${nextGig.ticketLabel || 'Tickets'}"
+             data-track-category="tickets">${nextGig.ticketLabel || 'Tickets'} &rarr;</a>`
         : `<span class="gig-button gig-button--soon">Tickets soon</span>`
       }
     </div>
@@ -70,7 +87,11 @@ const outOfReachHTML = `
     </button>
     <div id="oor-platforms" class="listen-expand__panel" hidden>
       ${outOfReachPlatforms.map(p => `
-        <a class="gig-button gig-button--platform" href="${p.url}" target="_blank" rel="noopener">
+        <a class="gig-button gig-button--platform" href="${p.url}" target="_blank" rel="noopener"
+           data-track-type="streaming"
+           data-track-label="${p.label}"
+           data-track-platform="${p.platform}"
+           data-track-category="streaming">
           ${p.label} &rarr;
         </a>
       `).join('')}
@@ -79,7 +100,11 @@ const outOfReachHTML = `
 `
 
 const linksHTML = links.map(l => `
-  <a class="gig-button" href="${l.url}" target="_blank" rel="noopener">
+  <a class="gig-button" href="${l.url}" target="_blank" rel="noopener"
+     data-track-type="${l.trackType}"
+     ${l.trackPlatform ? `data-track-platform="${l.trackPlatform}"` : ''}
+     data-track-category="${l.trackCategory}"
+     data-track-label="${l.label}">
     ${l.label} &rarr;
   </a>
 `).join('')

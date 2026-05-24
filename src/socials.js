@@ -73,11 +73,11 @@ const gigHTML = nextGig ? `
 ` : ''
 
 const outOfReachHTML = `
-  <div class="listen-expand" data-expanded="false">
-    <button type="button" class="gig-button listen-expand__toggle" aria-expanded="false" aria-controls="oor-platforms">
+  <div class="listen-expand" data-expanded="true">
+    <button type="button" class="gig-button listen-expand__toggle" aria-expanded="true" aria-controls="oor-platforms">
       Listen to "Out of Reach" <span class="listen-expand__chev" aria-hidden="true">&darr;</span>
     </button>
-    <div id="oor-platforms" class="listen-expand__panel" hidden>
+    <div id="oor-platforms" class="listen-expand__panel">
       ${outOfReachPlatforms.map(p => `
         <a class="gig-button gig-button--platform" href="${p.url}" target="_blank" rel="noopener"
            data-track-type="streaming"

@@ -5,19 +5,11 @@ import { Footer } from './components/Footer.js'
 const gigs = []
 
 const outOfReachPlatforms = [
-<<<<<<< Updated upstream
-  { label: 'Spotify', url: 'https://open.spotify.com/album/2rCkRsHw14IPHbVmbTab5x' },
-  { label: 'Apple Music', url: 'https://music.apple.com/gb/album/out-of-reach-single/1892339999' },
-  { label: 'Tidal', url: 'https://tidal.com/album/514506666/u' },
-  { label: 'YouTube Music', url: 'https://www.youtube.com/watch?v=V2_Sft3qiOU&list=RDV2_Sft3qiOU&start_radio=1' },
-  { label: 'Deezer', url: 'https://link.deezer.com/s/337SaFfzcsYOXVH0OPDJ6' },
-=======
-  { label: 'Apple Music',  url: 'https://music.apple.com/gb/album/out-of-reach-single/1892339999', platform: 'apple_music' },
-  { label: 'Tidal',        url: 'https://tidal.com/album/514506666/u', platform: 'tidal' },
+  { label: 'Spotify',       url: 'https://open.spotify.com/album/2rCkRsHw14IPHbVmbTab5x', platform: 'spotify' },
+  { label: 'Apple Music',   url: 'https://music.apple.com/gb/album/out-of-reach-single/1892339999', platform: 'apple_music' },
+  { label: 'Tidal',         url: 'https://tidal.com/album/514506666/u', platform: 'tidal' },
   { label: 'YouTube Music', url: 'https://www.youtube.com/watch?v=V2_Sft3qiOU&list=RDV2_Sft3qiOU&start_radio=1', platform: 'youtube_music' },
-  { label: 'Deezer',       url: 'https://link.deezer.com/s/337SaFfzcsYOXVH0OPDJ6', platform: 'deezer' },
-  { label: 'Spotify',      url: 'https://open.spotify.com/album/2rCkRsHw14IPHbVmbTab5x', platform: 'spotify' },
->>>>>>> Stashed changes
+  { label: 'Deezer',        url: 'https://link.deezer.com/s/337SaFfzcsYOXVH0OPDJ6', platform: 'deezer' },
 ]
 
 const links = [

@@ -34,6 +34,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         gigs: resolve(__dirname, 'gigs.html'),
         socials: resolve(__dirname, 'socials.html'),
+        'out-of-reach': resolve(__dirname, 'out-of-reach.html'),
       },
     },
   },

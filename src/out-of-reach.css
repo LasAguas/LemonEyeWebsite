@@ -1,0 +1,88 @@
+.oor-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2eae7;
+  padding: 2rem 1rem;
+}
+
+.oor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.oor-artist {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #191e21;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.oor-artist:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.oor-cover {
+  width: 100%;
+  max-width: 196px;
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(25, 30, 33, 0.18);
+}
+
+.oor-title {
+  font-family: 'Gaslon', Georgia, serif;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-weight: 400;
+  color: #191e21;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.oor-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #191e21;
+  opacity: 0.5;
+  margin-bottom: 0.25rem;
+}
+
+.oor-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.oor-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #191e21;
+  color: #f2eae7;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 1rem 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+  width: 100%;
+}
+
+.oor-btn:hover {
+  background: #000;
+  transform: translateY(-1px);
+  text-decoration: none;
+}

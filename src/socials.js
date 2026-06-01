@@ -1,6 +1,7 @@
 import './styles.css'
 import { Header, initMobileMenu } from './components/Header.js'
 import { Footer } from './components/Footer.js'
+import { initCursorHearts } from './cursor-hearts.js'
 
 const gigs = []
 
@@ -13,6 +14,13 @@ const outOfReachPlatforms = [
 ]
 
 const links = [
+  {
+    label: 'Paparoti June 3rd',
+    url: 'https://www.lovng.com/events/C4o46cSydX8xwqfvfNaL',
+    trackType: 'tickets',
+    trackPlatform: 'lovng',   // optional — captures the ticketing provider
+    trackCategory: 'tickets',
+  },
   {
     label: 'Mailing list',
     url: 'http://eepurl.com/jomA7I',
@@ -116,6 +124,9 @@ document.querySelector('#app').innerHTML = `
 `
 
 initMobileMenu()
+
+// Multiplayer "hold cursors" yellow-heart feature (desktop only).
+//initCursorHearts()
 
 const expand = document.querySelector('.listen-expand')
 if (expand) {

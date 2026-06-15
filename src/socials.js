@@ -15,13 +15,6 @@ const outOfReachPlatforms = [
 
 const links = [
   {
-    label: 'Paparoti June 3rd',
-    url: 'https://www.lovng.com/events/C4o46cSydX8xwqfvfNaL',
-    trackType: 'tickets',
-    trackPlatform: 'lovng',   // optional — captures the ticketing provider
-    trackCategory: 'tickets',
-  },
-  {
     label: 'Mailing list',
     url: 'http://eepurl.com/jomA7I',
     trackType: 'newsletter',

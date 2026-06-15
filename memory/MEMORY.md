@@ -1,0 +1,1 @@
+- [Webstore setup](project_webstore.md) — Stripe Hosted Checkout via Vercel serverless fn; env vars, file locations, local dev steps

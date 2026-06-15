@@ -1,4 +1,4 @@
-const socials = [
+export const socials = [
   { name: 'Apple Music', img: 'Lemon Eye On Apple Music.png', url: 'https://music.apple.com/gb/artist/lemon-eye/1663690008' },
   { name: 'Bandcamp', img: 'Lemon Eye On Bandcamp.png', url: 'https://lemoneye.bandcamp.com/' },
   { name: 'Deezer', img: 'Lemon Eye On Deezer.png', url: 'https://www.deezer.com/de/artist/196463387' },

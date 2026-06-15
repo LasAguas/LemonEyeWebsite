@@ -16,7 +16,7 @@ const contacts = [
   {
     label: 'Press & EPK',
     note: 'High-res photos, bio, and press materials.',
-    href: '/epk.html',
+    href: '/press',
     cta: 'Open press kit',
   },
 ]

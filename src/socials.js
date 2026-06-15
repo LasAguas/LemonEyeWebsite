@@ -1,7 +1,7 @@
 import './styles.css'
 import { Header, initMobileMenu } from './components/Header.js'
 import { Footer } from './components/Footer.js'
-import { initCursorHearts } from './cursor-hearts.js'
+//import { initCursorHearts } from './cursor-hearts.js'
 
 const gigs = []
 

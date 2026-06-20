@@ -13,6 +13,16 @@ function formatDate(iso) {
 }
 
 const pressPhotos = [
+  { src: '/images/press/Band Horizontal L.png', alt: 'Lemon Eye band photo', credit: 'Krasi Paskalev' },
+  { src: '/images/press/Full Band Fun.png', alt: 'Lemon Eye full band', credit: 'Krasi Paskalev' },
+  { src: '/images/press/Band with Instruments.png', alt: 'Lemon Eye with instruments', credit: 'Krasi Paskalev' },
+  { src: '/images/press/Band Vertical Image.png', alt: 'Lemon Eye band portrait', credit: 'Krasi Paskalev' },
+  { src: '/images/press/Full Band White BG.png', alt: 'Lemon Eye full band on white background', credit: 'Krasi Paskalev' },
+  { src: '/images/press/Aicha - Vocals for Lemon Eye.png', alt: 'Aicha (vocals) - Lemon Eye', credit: 'Krasi Paskalev' },
+  { src: '/images/press/Ada - Guitarist for Lemon Eye.png', alt: 'Ada (guitar) - Lemon Eye', credit: 'Krasi Paskalev' },
+  { src: '/images/press/Julien - Bassist for Lemon Eye.png', alt: 'Julien (bass) - Lemon Eye', credit: 'Krasi Paskalev' },
+  { src: '/images/press/AC - Cellist for Lemon Eye.png', alt: 'Anne Claire (cello) - Lemon Eye', credit: 'Krasi Paskalev' },
+  { src: '/images/press/Jakob - Drummer for Lemon Eye.png', alt: 'Jakob (drums) - Lemon Eye', credit: 'Krasi Paskalev' },
   { src: '/images/band-profiles/Aicha PFP.JPG', alt: 'Aicha (vocals) performing live', credit: 'Krasi Paskalev' },
   { src: '/images/band-profiles/Ada PFP.JPG', alt: 'Ada (guitar) performing live', credit: 'Krasi Paskalev' },
   { src: '/images/band-profiles/Julienne PFP.jpeg', alt: 'Julien (bass) performing live', credit: 'Krasi Paskalev' },
@@ -29,19 +39,34 @@ const pressCoverage = [
 ]
 
 const showsPlayed = [
-  { venue: 'Barket', role: 'Open mic opener' },
-  { venue: 'Bar Bobu' },
-  { venue: 'Weisse Rose' },
-  { venue: 'Artstalker' },
-  { venue: 'Sound der Nacht', role: 'Opener for the circus' },
-  { venue: 'Sky Mic Berlin' },
-  { venue: 'Breaking Sound Berlin' },
-  { venue: 'Pfefferberg Haus 13', role: 'Opener for Sector 5' },
-  { venue: 'House of Music', role: 'Opening for Oktobernacht' },
-  { venue: 'Lark', role: 'Opening for Efro' },
-  { venue: 'Yorck Kino Opening Night', role: 'Acoustic' },
-  { venue: 'Bandlift Festival' },
-  { venue: 'Kraut & Rüben Festival' },
+  {
+    category: 'Headlining',
+    shows: [
+      { venue: 'Bar Bobu' },
+      { venue: 'Weisse Rose' },
+      { venue: 'Artstalker' },
+      { venue: 'Sky Mic Berlin' },
+      { venue: 'Breaking Sound Berlin' },
+      { venue: 'Yorck Kino Opening Night', role: 'Acoustic' },
+    ],
+  },
+  {
+    category: 'Festivals',
+    shows: [
+      { venue: 'Bandlift Festival' },
+      { venue: 'Kraut & Rüben Festival' },
+    ],
+  },
+  {
+    category: 'Opening',
+    shows: [
+      { venue: 'Barket', role: 'Open mic opener' },
+      { venue: 'Sound der Nacht', role: 'Opener for the circus' },
+      { venue: 'Pfefferberg Haus 13', role: 'Opener for Sector 5' },
+      { venue: 'House of Music', role: 'Opening for Oktobernacht' },
+      { venue: 'Lark', role: 'Opening for Efro' },
+    ],
+  },
 ]
 
 const contacts = [
@@ -110,17 +135,11 @@ document.querySelector('#app').innerHTML = `
       <h1 class="heading about-heading">Press</h1>
       <div class="about-bio">
         <p>
-          Indie rock, chamber pop, hints of RnB: Berlin based <strong>Lemon Eye</strong>
-          refuses to be boxed into musical clichés. Sometimes loud and flamboyant,
-          other times quiet and dreamy, the group playfully jumps back and forth
-          between genres, ensuring a constant flow of emotions.
-        </p>
-        <p>
-          Founded in 2022, their instrumental makeup is also anything but
-          conventional: the typical formation of drums, bass and guitars is
-          elevated in some songs by the melodic sound of a cello. Lively and
-          playful performances but also bittersweet and lighthearted lyrics
-          that don't always take themselves too seriously &mdash; that, is Lemon Eye.
+          Lemon Eye is a band of contrasts - sometimes loud and flamboyant, other times quiet and dreamy. Hailing from Berlin, this five-piece group seamlessly blends infectious pop melodies, heavy rock energy, and laid-back indie vibes, effortlessly crossing genre boundaries. Their lyrics strike a balance between lighthearted and bittersweet, creating songs that feel both familiar and unexpected. 
+</p><p>
+Adding to their unique sonic identity, Lemon Eye’s lineup isn’t your typical (indie-)rock ensemble. Alongside the powerful combination of drums, bass, and guitars, the band features a cello, infusing their music with an extra layer of depth and emotion.
+</p><p>
+But it’s not just their music that stands out - Lemon Eye’s live performances are an experience in themselves: With an electrifying stage presence, the band brings high-energy fun to every show, led by their quirky and captivating frontwoman Aicha. Whether it’s playful banter, unexpected moments, or pure musical passion, their concerts are anything but ordinary. 
         </p>
       </div>
       <div class="press-actions">
@@ -133,9 +152,13 @@ document.querySelector('#app').innerHTML = `
     <h2 class="band-heading">Live</h2>
     <div class="press-video">
       <div class="video-wrap">
-        <!-- Drop in a YouTube embed iframe here, e.g.
-             <iframe src="https://www.youtube.com/embed/VIDEO_ID" ... ></iframe> -->
-        <div class="placeholder" data-label="Live video — embed coming soon"></div>
+        <iframe
+          src="https://www.youtube.com/embed/qQNY8fiCLjg"
+          title="Lemon Eye — Live"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
 
@@ -170,15 +193,18 @@ document.querySelector('#app').innerHTML = `
     </div>
 
     <h2 class="band-heading">Shows Played</h2>
-    <div class="press-shows-grid">
-      ${showsPlayed.map(s => `
-        <div class="press-show-item">
-          <span class="press-show-item__venue">${s.venue}</span>
-          ${s.role ? `<span class="press-show-item__role">${s.role}</span>` : ''}
-        </div>
-      `).join('')}
-    </div>
-
+    ${showsPlayed.map(group => `
+      <h3 class="press-shows-category">${group.category}</h3>
+      <div class="press-shows-grid">
+        ${group.shows.map(s => `
+          <div class="press-show-item">
+            <span class="press-show-item__venue">${s.venue}</span>
+            ${s.role ? `<span class="press-show-item__role">${s.role}</span>` : ''}
+          </div>
+        `).join('')}
+      </div>
+    `).join('')}
+<br>
     <div class="band-divider" aria-hidden="true"></div>
 
     <h2 class="band-heading">Listen &amp; Follow</h2>

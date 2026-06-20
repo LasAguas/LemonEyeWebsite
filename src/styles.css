@@ -998,7 +998,6 @@ img { max-width: 100%; height: auto; display: block; }
 .press-photo__frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 4px;
   background: #1a1a1a;
@@ -1006,8 +1005,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .press-photo__frame img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
   transition: transform 0.5s ease;
 }
 
@@ -1077,6 +1076,19 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* Shows played */
+.press-shows-category {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #191e21;
+  opacity: 0.45;
+  margin: 1.8rem 0 0.8rem;
+}
+
+.press-shows-category:first-of-type {
+  margin-top: 0;
+}
+
 .press-shows-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

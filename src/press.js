@@ -18,11 +18,6 @@ const pressPhotos = [
   { src: '/images/press/Band with Instruments.png', alt: 'Lemon Eye with instruments', credit: 'Krasi Paskalev' },
   { src: '/images/press/Band Vertical Image.png', alt: 'Lemon Eye band portrait', credit: 'Krasi Paskalev' },
   { src: '/images/press/Full Band White BG.png', alt: 'Lemon Eye full band on white background', credit: 'Krasi Paskalev' },
-  { src: '/images/press/Aicha - Vocals for Lemon Eye.png', alt: 'Aicha (vocals) - Lemon Eye', credit: 'Krasi Paskalev' },
-  { src: '/images/press/Ada - Guitarist for Lemon Eye.png', alt: 'Ada (guitar) - Lemon Eye', credit: 'Krasi Paskalev' },
-  { src: '/images/press/Julien - Bassist for Lemon Eye.png', alt: 'Julien (bass) - Lemon Eye', credit: 'Krasi Paskalev' },
-  { src: '/images/press/AC - Cellist for Lemon Eye.png', alt: 'Anne Claire (cello) - Lemon Eye', credit: 'Krasi Paskalev' },
-  { src: '/images/press/Jakob - Drummer for Lemon Eye.png', alt: 'Jakob (drums) - Lemon Eye', credit: 'Krasi Paskalev' },
   { src: '/images/band-profiles/Aicha PFP.JPG', alt: 'Aicha (vocals) performing live', credit: 'Krasi Paskalev' },
   { src: '/images/band-profiles/Ada PFP.JPG', alt: 'Ada (guitar) performing live', credit: 'Krasi Paskalev' },
   { src: '/images/band-profiles/Julienne PFP.jpeg', alt: 'Julien (bass) performing live', credit: 'Krasi Paskalev' },
@@ -33,7 +28,7 @@ const pressPhotos = [
 const pressCoverage = [
   {
     source: 'indie.berlin',
-    title: 'Live review of Lemon Eye',
+    title: '“If Berlin is going to reclaim its place as a city capable of producing genuinely  exciting indie rock  again, it will likely come from groups like Lemon Eye”',
     url: 'https://www.indie.berlin/review-lemon-eye/',
   },
 ]

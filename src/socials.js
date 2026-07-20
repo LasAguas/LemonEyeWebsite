@@ -15,6 +15,13 @@ const outOfReachPlatforms = [
 
 const links = [
   {
+    label: 'Junction Bar TICKETS',
+    url: 'https://junction-bar-shop.de/lemon-eye-zora.html',
+    trackType: 'tickets',
+    trackPlatform: null,
+    trackCategory: 'tickets',
+  },
+  {
     label: 'Mailing list',
     url: 'http://eepurl.com/jomA7I',
     trackType: 'newsletter',

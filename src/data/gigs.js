@@ -9,8 +9,8 @@ export const gigs = [
     doors: '20:30',
     show: '21:00',
     description: 'On August fifth we willl be playing a show at Juncition Bar with Zora!!!',  // can omit
-    // ticketUrl: 'https://www.instagram.com/p/DZPnIAZEo3u/',         // omit → shows "Tickets soon"
-    ticketLabel: 'More Info',       // optional, defaults to "Tickets"
+    ticketUrl: 'https://junction-bar-shop.de/lemon-eye-zora.html',         // omit → shows "Tickets soon"
+    ticketLabel: 'Tickets',       // optional, defaults to "Tickets"
   },
 ]
 

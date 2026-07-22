@@ -19,17 +19,11 @@ document.querySelector('#app').innerHTML = `
       <h1 class="heading about-heading">About the Band</h1>
       <div class="about-bio">
         <p>
-          Indie rock, chamber pop, hints of RnB: Berlin based <strong>Lemon Eye</strong>
-          refuses to be boxed into musical clichés. Sometimes loud and flamboyant,
-          other times quiet and dreamy, the group playfully jumps back and forth
-          between genres, ensuring a constant flow of emotions.
-        </p>
-        <p>
-          Founded in 2022, their instrumental constellation is also anything but
-          conventional: the typical formation of drums, bass and guitars is elevated
-          in some songs by the melodic sound of a cello. Lively and playful
-          performances but also bittersweet and lighthearted lyrics that don't
-          always take themselves too seriously &mdash; that, is Lemon Eye.
+          Sometimes loud and cheeky, sometimes vulnerable and dreamy: <strong>Lemon Eye</strong> blends
+          pop, indie, and rock into a sound full of contrasts, seamlessly shifting between moods
+          and emotions. Featuring a lineup that includes not only drums, bass, and guitars but
+          also a cello, the band introduces a refreshing element to their music, delivering live
+          performances that linger in your mind.
         </p>
       </div>
     </div>

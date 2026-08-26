@@ -324,10 +324,6 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ========== Newsletter Form ========== */
-.mc-form {
-  position: relative;
-}
-
 .required-note {
   color: #666;
   font-size: 0.82rem;
@@ -363,37 +359,6 @@ img { max-width: 100%; height: auto; display: block; }
 .field input:focus {
   outline: 2px solid #191e21;
   outline-offset: 1px;
-}
-
-.datefield {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.bday-input {
-  width: 52px !important;
-  text-align: center;
-  background: #fff;
-  color: #000;
-  border: none;
-  padding: 0.7rem 0.4rem;
-  font-size: 1rem;
-  font-family: inherit;
-  border-radius: 3px;
-}
-
-.bday-input:focus {
-  outline: 2px solid #191e21;
-  outline-offset: 1px;
-}
-
-.date-sep { color: #666; margin: 0 0.1rem; }
-
-.bday-hint {
-  color: #555;
-  font-size: 0.78rem;
-  margin-left: 0.6rem;
 }
 
 .btn-subscribe {
@@ -922,6 +887,94 @@ img { max-width: 100%; height: auto; display: block; }
 .gig-button--platform:hover {
   background: #e8ddd9;
   color: #191e21;
+}
+
+/* ========== Mailing List Signup (native Las Aguas form) ========== */
+.signup { display: flex; flex-direction: column; width: 100%; }
+
+.signup__toggle {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  justify-content: center;
+  width: 100%;
+}
+
+.signup__chev {
+  transition: transform 0.25s ease;
+  font-size: 0.9rem;
+}
+
+.signup[data-expanded="true"] .signup__chev {
+  transform: rotate(180deg);
+}
+
+/* Solid panel: on mobile these links sit over the hero photo, so the
+   inputs need an opaque backdrop to stay legible. */
+.signup__panel {
+  background: #f2eae7;
+  border: 1px solid rgba(25, 30, 33, 0.15);
+  border-radius: 4px;
+  padding: 1.1rem 1rem 0.9rem;
+  margin-top: 0.75rem;
+  text-align: left;
+}
+
+.signup__panel[hidden] { display: none; }
+
+.signup__field { margin-bottom: 0.85rem; }
+
+.signup__field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.signup__field input[type="text"],
+.signup__field input[type="email"] {
+  border: 1px solid rgba(25, 30, 33, 0.18);
+}
+
+/* honeypot */
+.signup__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.signup__submit {
+  width: 100%;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 0.2rem;
+}
+
+.signup__submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
+.signup__msg {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-top: 0.6rem;
+}
+
+.signup__msg:empty { margin-top: 0; }
+
+.signup__msg--error { color: #a4291f; }
+
+.signup__done {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-align: center;
+  padding: 0.4rem 0;
 }
 
 .gig-empty {

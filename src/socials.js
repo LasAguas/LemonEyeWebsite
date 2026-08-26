@@ -1,6 +1,8 @@
 import './styles.css'
 import { Header, initMobileMenu } from './components/Header.js'
 import { Footer } from './components/Footer.js'
+import { SignupForm, initSignupForm } from './components/SignupForm.js'
+import { SOCIALS_FORM } from './lib/signup-config.js'
 //import { initCursorHearts } from './cursor-hearts.js'
 
 const gigs = []
@@ -20,13 +22,6 @@ const links = [
     trackType: 'tickets',
     trackPlatform: null,
     trackCategory: 'tickets',
-  },
-  {
-    label: 'Mailing list',
-    url: 'http://eepurl.com/jomA7I',
-    trackType: 'newsletter',
-    trackPlatform: 'mailchimp',
-    trackCategory: 'newsletter',
   },
   {
     label: 'Indie Berlin Review',
@@ -81,11 +76,11 @@ const gigHTML = nextGig ? `
 ` : ''
 
 const outOfReachHTML = `
-  <div class="listen-expand" data-expanded="true">
-    <button type="button" class="gig-button listen-expand__toggle" aria-expanded="true" aria-controls="oor-platforms">
+  <div class="listen-expand" data-expanded="false">
+    <button type="button" class="gig-button listen-expand__toggle" aria-expanded="false" aria-controls="oor-platforms">
       Listen to "Out of Reach" <span class="listen-expand__chev" aria-hidden="true">&darr;</span>
     </button>
-    <div id="oor-platforms" class="listen-expand__panel">
+    <div id="oor-platforms" class="listen-expand__panel" hidden>
       ${outOfReachPlatforms.map(p => `
         <a class="gig-button gig-button--platform" href="${p.url}" target="_blank" rel="noopener"
            data-track-type="streaming"
@@ -116,6 +111,7 @@ document.querySelector('#app').innerHTML = `
     ${gigHTML ? `<div class="gigs-list">${gigHTML}</div>` : ''}
     <div class="socials-links">
       ${outOfReachHTML}
+      ${SignupForm({ slug: SOCIALS_FORM.slug, formId: SOCIALS_FORM.formId, label: 'Join the mailing list', expanded: true })}
       ${linksHTML}
     </div>
   </section>
@@ -124,6 +120,7 @@ document.querySelector('#app').innerHTML = `
 `
 
 initMobileMenu()
+initSignupForm()
 
 // Multiplayer "hold cursors" yellow-heart feature (desktop only).
 //initCursorHearts()

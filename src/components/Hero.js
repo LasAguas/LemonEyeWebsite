@@ -1,6 +1,7 @@
 import { UpcomingEvent } from './UpcomingEvent.js'
 import { NewsletterForm } from './NewsletterForm.js'
 import { gigs } from '../data/gigs.js'
+import { SITE_FORM } from '../lib/signup-config.js'
 
 const hasShow = gigs.length > 0
 
@@ -15,10 +16,10 @@ export function Hero() {
 
   return `
     <section class="hero">
-      ${NewsletterForm({ wrapperClass: 'hero-form hero-form--desktop' })}
+      ${NewsletterForm({ wrapperClass: 'hero-form hero-form--desktop', slug: SITE_FORM.slug, formId: SITE_FORM.formId })}
     </section>
     <section class="hero-form-mobile">
-      ${NewsletterForm({ wrapperClass: 'hero-form' })}
+      ${NewsletterForm({ wrapperClass: 'hero-form', slug: SITE_FORM.slug, formId: SITE_FORM.formId })}
     </section>
   `
 }

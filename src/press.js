@@ -138,7 +138,7 @@ But it’s not just their music that stands out - Lemon Eye’s live performance
         </p>
       </div>
       <div class="press-actions">
-        <a class="gig-button" href="public/Lemon Eye EPK ENG 25.06.2026.pdf" target="_blank" rel="noopener">Download EPK &rarr;</a>
+        <a class="gig-button" href="/Lemon Eye EPK ENG 25.06.2026.pdf" target="_blank" rel="noopener">Download EPK &rarr;</a>
       </div>
     </div>
 

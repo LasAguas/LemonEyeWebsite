@@ -24,7 +24,7 @@ export function Footer() {
           <a href="mailto:lemoneyezeband@gmail.com" class="footer-link">lemoneyezeband@gmail.com</a>
         </div>
         <div class="footer-col">
-          <a href="/Lemon Eye EPK ENG.pdf" target="_blank" rel="noopener" class="footer-link">epk and press resources</a>
+          <a href="https://drive.google.com/file/d/1GPVb_KFbNiVQ9IXRgOK7wO-oFxq6PXZt/view?usp=sharing" target="_blank" rel="noopener" class="footer-link">epk and press resources</a>
         </div>
         <div class="footer-col footer-col--icons">
           ${icons}

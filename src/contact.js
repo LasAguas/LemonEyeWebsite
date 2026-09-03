@@ -6,7 +6,7 @@ const contacts = [
   {
     label: 'General Inquiries',
     note: 'Press, collaborations, and everything else.',
-    email: 'contact@lemoneye.band',
+    email: 'lemoneyezeband@gmail.com',
   },
   {
     label: 'Marketing',

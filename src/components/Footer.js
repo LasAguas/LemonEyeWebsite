@@ -21,7 +21,7 @@ export function Footer() {
     <footer class="site-footer">
       <div class="container">
         <div class="footer-col">
-          <a href="mailto:contact@lemoneye.band" class="footer-link">contact@lemoneye.band</a>
+          <a href="mailto:lemoneyezeband@gmail.com" class="footer-link">lemoneyezeband@gmail.com</a>
         </div>
         <div class="footer-col">
           <a href="/Lemon Eye EPK ENG.pdf" target="_blank" rel="noopener" class="footer-link">epk and press resources</a>

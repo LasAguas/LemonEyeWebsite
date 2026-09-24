@@ -17,13 +17,6 @@ const outOfReachPlatforms = [
 
 const links = [
   {
-    label: 'Twisted Trees Festival TICKETS',
-    url: 'https://www.eventbrite.com/e/twisted-trees-festival-2026-tickets-1996457440949?aff=oddtdtcreator&utm_source=ig&utm_medium=social&utm_content=link_in_bio',
-    trackType: 'tickets',
-    trackPlatform: null,
-    trackCategory: 'tickets',
-  },
-  {
     label: 'Indie Berlin Review',
     url: 'https://www.indie.berlin/review-lemon-eye/',
     trackType: 'other',

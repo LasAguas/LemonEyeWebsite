@@ -568,6 +568,17 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 0.25rem;
 }
 
+/* Live videos */
+.about-live {
+  margin-top: 5rem;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
 /* ========== Contact Page ========== */
 .contact-page {
   max-width: 1100px;
@@ -1521,6 +1532,13 @@ img { max-width: 100%; height: auto; display: block; }
     grid-column: 1 / -1;
     max-width: 50%;
     margin: 0 auto;
+  }
+
+  .about-live { margin-top: 3.5rem; }
+
+  .live-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
   }
 
   .contact-page,

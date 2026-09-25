@@ -10,6 +10,11 @@ const members = [
   { name: 'Jakob', role: 'Drums', img: '/images/band-profiles/Jakob PFP.jpeg' },
 ]
 
+const liveVideos = [
+  { id: 'PhxqcA-gpp4', title: 'man, woman / yours live at Twisted Trees - Lemon Eye' },
+  { id: 'qQNY8fiCLjg', title: 'Come Clean - Live at Lark' },
+]
+
 document.querySelector('#app').innerHTML = `
   ${Header()}
 
@@ -35,7 +40,7 @@ document.querySelector('#app').innerHTML = `
       ${members.map(m => `
         <figure class="band-member">
           <div class="band-member__photo">
-            <img src="${m.img}" alt="${m.name} &mdash; ${m.role}" loading="lazy" />
+            <img src="${m.img}" alt="${m.name} (${m.role})" loading="lazy" />
           </div>
           <figcaption class="band-member__caption">
             <span class="band-member__name">${m.name}</span>
@@ -43,6 +48,25 @@ document.querySelector('#app').innerHTML = `
           </figcaption>
         </figure>
       `).join('')}
+    </div>
+
+    <div class="about-live">
+      <div class="band-divider" aria-hidden="true"></div>
+      <h2 class="band-heading">Live</h2>
+      <div class="live-grid">
+        ${liveVideos.map(v => `
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/${v.id}"
+              title="${v.title}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        `).join('')}
+      </div>
     </div>
   </section>
 

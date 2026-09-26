@@ -3,6 +3,11 @@ import { Header, initMobileMenu } from './components/Header.js'
 import { Footer } from './components/Footer.js'
 import { gigs, past } from './data/gigs.js'
 
+const liveVideos = [
+  { id: 'PhxqcA-gpp4', title: 'man, woman / yours live at Twisted Trees - Lemon Eye' },
+  { id: 'qQNY8fiCLjg', title: 'Come Clean - Live at Lark' },
+]
+
 function formatDate(iso) {
   return new Date(iso + 'T00:00:00').toLocaleDateString('en-GB', {
     weekday: 'long',
@@ -64,11 +69,28 @@ document.querySelector('#app').innerHTML = `
       </p>
     </div>
 
-    <div class="band-divider" aria-hidden="true"></div>
-
     <div class="gigs-list">
       ${upcomingHTML}
     </div>
+
+    ${!gigs.length ? `
+      <div class="band-divider" style="margin-top:2.5rem;" aria-hidden="true"></div>
+      <h2 class="band-heading">Live</h2>
+      <div class="live-grid">
+        ${liveVideos.map(v => `
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/${v.id}"
+              title="${v.title}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        `).join('')}
+      </div>
+    ` : ''}
 
     ${past.length ? `
       <h2 class="band-heading" style="margin-top:5rem;">Past Shows</h2>

@@ -15,6 +15,11 @@ const outOfReachPlatforms = [
   { label: 'Deezer',        url: 'https://link.deezer.com/s/337SaFfzcsYOXVH0OPDJ6', platform: 'deezer' },
 ]
 
+const liveVideos = [
+  { id: 'PhxqcA-gpp4', title: 'man, woman / yours live at Twisted Trees - Lemon Eye' },
+  { id: 'qQNY8fiCLjg', title: 'Come Clean - Live at Lark' },
+]
+
 const links = [
   {
     label: 'Indie Berlin Review',
@@ -104,16 +109,42 @@ const linksHTML = links.map(l => `
   </a>
 `).join('')
 
+const liveHTML = `
+  <div class="socials-live">
+    <div class="band-divider" aria-hidden="true"></div>
+    <h2 class="band-heading">Live</h2>
+    <div class="live-grid">
+      ${liveVideos.map(v => `
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/${v.id}"
+            title="${v.title}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+`
+
 document.querySelector('#app').innerHTML = `
   ${Header()}
 
-  <section class="socials-page">
-    ${gigHTML ? `<div class="gigs-list">${gigHTML}</div>` : ''}
+  <section class="gigs-page socials-gigs">
+    ${gigHTML
+      ? `<div class="gigs-list">${gigHTML}</div>`
+      : `<div class="gig-empty"><p>No shows on the calendar right now.</p><p class="gig-empty__sub">Follow us on socials to stay in the loop.</p></div>`
+    }
+    <div class="band-divider" aria-hidden="true"></div>
     <div class="socials-links">
       ${outOfReachHTML}
       ${SignupForm({ slug: SOCIALS_FORM.slug, formId: SOCIALS_FORM.formId, label: 'Join the mailing list', expanded: false })}
       ${linksHTML}
     </div>
+    ${liveHTML}
   </section>
 
   ${Footer()}

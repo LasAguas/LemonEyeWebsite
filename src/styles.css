@@ -691,18 +691,14 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ========== Socials Page ========== */
-.socials-page {
-  min-height: calc(100vh - 8rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 5rem;
-}
-
 .socials-links {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.socials-live {
+  margin-top: 2rem;
 }
 
 .gigs-list {
@@ -1597,29 +1593,6 @@ img { max-width: 100%; height: auto; display: block; }
   .gig-date__year { margin-top: 0; margin-left: auto; }
 
   .gig-button { width: 100%; justify-content: center; }
-
-  /* Socials page mobile hero */
-  .socials-page {
-    display: block;
-    min-height: unset;
-    padding: 0;
-    position: relative;
-    background: url('/images/Lemon-Eye-Mobile-Hero-Section.jpg') center top / cover no-repeat;
-    aspect-ratio: 9 / 16;
-  }
-
-  .socials-page .gigs-list {
-    display: none;
-  }
-
-  .socials-links {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    align-items: center;
-  }
 
   /* Store page mobile */
   .store-page { padding: 6rem 2rem 3rem; }

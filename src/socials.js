@@ -23,6 +23,13 @@ const links = [
     trackPlatform: null,
     trackCategory: 'press',
   },
+  {
+    label: 'Live at Twisted Trees Festival',
+    url: 'https://www.youtube.com/watch?v=PhxqcA-gpp4',
+    trackType: 'other',
+    trackPlatform: null,
+    trackCategory: 'press',
+  },
 ]
 
 function formatDate(iso) {
@@ -104,7 +111,7 @@ document.querySelector('#app').innerHTML = `
     ${gigHTML ? `<div class="gigs-list">${gigHTML}</div>` : ''}
     <div class="socials-links">
       ${outOfReachHTML}
-      ${SignupForm({ slug: SOCIALS_FORM.slug, formId: SOCIALS_FORM.formId, label: 'Join the mailing list', expanded: true })}
+      ${SignupForm({ slug: SOCIALS_FORM.slug, formId: SOCIALS_FORM.formId, label: 'Join the mailing list', expanded: false })}
       ${linksHTML}
     </div>
   </section>

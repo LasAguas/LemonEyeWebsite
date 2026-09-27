@@ -5,8 +5,6 @@ import { SignupForm, initSignupForm } from './components/SignupForm.js'
 import { SOCIALS_FORM } from './lib/signup-config.js'
 //import { initCursorHearts } from './cursor-hearts.js'
 
-const gigs = []
-
 const outOfReachPlatforms = [
   { label: 'Spotify',       url: 'https://open.spotify.com/album/2rCkRsHw14IPHbVmbTab5x', platform: 'spotify' },
   { label: 'Apple Music',   url: 'https://music.apple.com/gb/album/out-of-reach-single/1892339999', platform: 'apple_music' },
@@ -36,49 +34,6 @@ const links = [
     trackCategory: 'press',
   },
 ]
-
-function formatDate(iso) {
-  return new Date(iso + 'T00:00:00').toLocaleDateString('en-GB', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  })
-}
-
-const nextGig = gigs[0]
-
-const gigHTML = nextGig ? `
-  <article class="gig-card">
-    <div class="gig-date" aria-label="${formatDate(nextGig.date)}">
-      <span class="gig-date__day">${nextGig.dateLabel.day}</span>
-      <span class="gig-date__month">${nextGig.dateLabel.month}</span>
-      <span class="gig-date__year">${nextGig.dateLabel.year}</span>
-    </div>
-    <div class="gig-body">
-      <p class="gig-role">${nextGig.role}</p>
-      <h2 class="gig-title">${nextGig.title}</h2>
-      <p class="gig-venue">
-        <strong>${nextGig.venue}</strong> · ${nextGig.city}
-      </p>
-      <p class="gig-times">
-        <span><span class="gig-times__label">Doors</span> ${nextGig.doors}</span>
-        <span class="gig-times__sep">·</span>
-        <span><span class="gig-times__label">Show</span> ${nextGig.show}</span>
-      </p>
-      ${nextGig.description ? `<p class="gig-description">${nextGig.description}</p>` : ''}
-    </div>
-    <div class="gig-cta">
-      ${nextGig.ticketUrl
-        ? `<a class="gig-button" href="${nextGig.ticketUrl}" target="_blank" rel="noopener"
-             data-track-type="tickets"
-             data-track-label="${nextGig.ticketLabel || 'Tickets'}"
-             data-track-category="tickets">${nextGig.ticketLabel || 'Tickets'} &rarr;</a>`
-        : `<span class="gig-button gig-button--soon">Tickets soon</span>`
-      }
-    </div>
-  </article>
-` : ''
 
 const outOfReachHTML = `
   <div class="listen-expand" data-expanded="false">
@@ -134,11 +89,6 @@ document.querySelector('#app').innerHTML = `
   ${Header()}
 
   <section class="gigs-page socials-gigs">
-    ${gigHTML
-      ? `<div class="gigs-list">${gigHTML}</div>`
-      : `<div class="gig-empty"><p>No shows on the calendar right now.</p><p class="gig-empty__sub">Follow us on socials to stay in the loop.</p></div>`
-    }
-    <div class="band-divider" aria-hidden="true"></div>
     <div class="socials-links">
       ${outOfReachHTML}
       ${SignupForm({ slug: SOCIALS_FORM.slug, formId: SOCIALS_FORM.formId, label: 'Join the mailing list', expanded: false })}

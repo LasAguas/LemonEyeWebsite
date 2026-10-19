@@ -2,7 +2,7 @@ export function Header() {
   return `
     <header class="site-header">
       <div class="container">
-        <a href="/" class="nav-home">Home</a>
+        <a href="/" class="nav-home"><img src="/images/Lemon-Eye-Logo.png" alt="Lemon Eye" class="nav-logo" /></a>
         <nav class="nav-right">
           <a href="/about">About</a>
           <span class="nav-sep">|</span>

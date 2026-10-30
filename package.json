@@ -13,7 +13,7 @@
     "url": "git+https://github.com/LasAguas/LemonEyeWebsite.git"
   },
   "devDependencies": {
-    "vite": "^8.0.8"
+    "vite": "^8.1.6"
   },
   "dependencies": {
     "playhtml": "^2.10.0",

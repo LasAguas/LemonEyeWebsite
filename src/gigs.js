@@ -73,8 +73,7 @@ document.querySelector('#app').innerHTML = `
       ${upcomingHTML}
     </div>
 
-    ${!gigs.length ? `
-      <div class="band-divider" style="margin-top:2.5rem;" aria-hidden="true"></div>
+    <div class="band-divider" style="margin-top:2.5rem;" aria-hidden="true"></div>
       <h2 class="band-heading">Live</h2>
       <div class="live-grid">
         ${liveVideos.map(v => `
@@ -90,7 +89,6 @@ document.querySelector('#app').innerHTML = `
           </div>
         `).join('')}
       </div>
-    ` : ''}
 
     ${past.length ? `
       <h2 class="band-heading" style="margin-top:5rem;">Past Shows</h2>

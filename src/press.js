@@ -50,16 +50,18 @@ const showsPlayed = [
     shows: [
       { venue: 'Bandlift Festival' },
       { venue: 'Kraut & Rüben Festival' },
+      { venue: 'Twisted Trees' },
     ],
   },
   {
     category: 'Opening',
     shows: [
       { venue: 'Barket', role: 'Open mic opener' },
-      { venue: 'Sound der Nacht', role: 'Opener for the circus' },
-      { venue: 'Pfefferberg Haus 13', role: 'Opener for Sector 5' },
+      { venue: 'Sound der Nacht', role: 'Opening for the circus' },
+      { venue: 'Pfefferberg Haus 13', role: 'Opening for Sector 5' },
       { venue: 'House of Music', role: 'Opening for Oktobernacht' },
       { venue: 'Lark', role: 'Opening for Efro' },
+      { venue: 'Prachtwerk', role: 'Opening for Mustbejohn' },
     ],
   },
 ]
@@ -68,7 +70,7 @@ const contacts = [
   {
     label: 'General Inquiries',
     note: 'Press, collaborations, and everything else.',
-    email: 'contact@lemoneye.band',
+    email: 'lemoneyezeband@gmail.com',
   },
   {
     label: 'Marketing',
@@ -138,7 +140,7 @@ But it’s not just their music that stands out - Lemon Eye’s live performance
         </p>
       </div>
       <div class="press-actions">
-        <a class="gig-button" href="https://drive.google.com/file/d/1GPVb_KFbNiVQ9IXRgOK7wO-oFxq6PXZt/view?usp=sharing" target="_blank" rel="noopener">Download EPK &rarr;</a>
+        <a class="gig-button" href="https://drive.google.com/file/d/1kQ5vUrKkVxtyJvGADbZAt_RIvkGuxWN6/view?usp=sharing" target="_blank" rel="noopener">Download EPK &rarr;</a>
       </div>
     </div>
 

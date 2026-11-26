@@ -12,26 +12,22 @@ export function Header() {
           <span class="nav-sep">|</span>
           <a href="/store">Store</a> 
           <span class="nav-sep">|</span>-->
+          <a href="/press">Press</a>
+          <span class="nav-sep">|</span>
           <a href="/contact">Contact</a>
-          <span class="nav-sep">|</span>
-          <a href="https://www.instagram.com/lemon.eye.zeband/" target="_blank" rel="noopener">Instagram</a>
-          <span class="nav-sep">|</span>
-          <a href="https://www.youtube.com/@lemon.eye.zeband" target="_blank" rel="noopener">YouTube</a>
         </nav>
         <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
       </div>
+      <nav class="mobile-menu">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/gigs">Gigs</a>
+        <!--<a href="/press">Press</a>
+        <a href="/store">Store</a>-->
+        <a href="/press">Press</a>
+        <a href="/contact">Contact</a>
+      </nav>
     </header>
-
-    <nav class="mobile-menu">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/gigs">Gigs</a>
-      <!--<a href="/press">Press</a>
-      <a href="/store">Store</a>-->
-      <a href="/contact">Contact</a>
-      <a href="https://www.instagram.com/lemon.eye.zeband/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.youtube.com/@lemon.eye.zeband" target="_blank" rel="noopener">YouTube</a>
-    </nav>
   `
 }
 

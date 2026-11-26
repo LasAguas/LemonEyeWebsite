@@ -1461,12 +1461,19 @@ img { max-width: 100%; height: auto; display: block; }
   .nav-logo { margin-left: 0; }
   .mobile-menu { padding: 1rem 2rem 2rem; }
 
-  /* Switch header from absolute to sticky so the menu flows naturally below it */
   .site-header {
     position: sticky;
     top: 0;
     background: #f2eae7;
     z-index: 100;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
   }
 
   /* Hero: swap to portrait image, size to full natural height */

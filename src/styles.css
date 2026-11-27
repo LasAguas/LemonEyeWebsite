@@ -1262,7 +1262,24 @@ img { max-width: 100%; height: auto; display: block; }
   border: 1px solid #ffeeba;
 }
 
+.store-status {
+  font-size: 1rem;
+  color: #4a4f53;
+}
+
 /* Product layout */
+.store-product + .store-product {
+  margin-top: 5rem;
+}
+
+.store-product.store-product--no-photos {
+  grid-template-columns: 1fr;
+}
+
+.store-product > * {
+  min-width: 0;
+}
+
 .store-product {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1349,8 +1366,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .store-info__price {
-  font-family: 'Gaslon', Georgia, serif;
-  font-size: 2rem;
+  /* Gaslon's euro sign and struck-through digits are hard to read. */
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
   color: #191e21;
   margin-top: 0.5rem;
 }
@@ -1452,6 +1471,194 @@ img { max-width: 100%; height: auto; display: block; }
   color: #4a4f53;
   letter-spacing: 0.03em;
 }
+
+/* Sale prices */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.store-info__price,
+.store-option__price,
+.store-summary dd,
+.store-receipt__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.5rem;
+}
+
+.store-was {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #5c6266;
+}
+
+.store-sale-badge {
+  align-self: center;
+  background: #f6d845;
+  color: #191e21;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.6;
+  padding: 0 0.45rem;
+  border-radius: 4px;
+}
+
+.store-sale-ends,
+.store-preorder {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4a4f53;
+}
+
+.store-info__desc {
+  white-space: pre-line;
+}
+
+/* Option picker */
+.store-options {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  min-width: 0;
+}
+
+.store-options legend {
+  margin-bottom: 0.5rem;
+}
+
+.store-option {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.6rem;
+  padding: 0.55rem 0.8rem;
+  background: #fff;
+  border: 1px solid rgba(25, 30, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.store-option--active {
+  border-color: #191e21;
+  box-shadow: 0 0 0 1px #191e21;
+}
+
+.store-option--sold-out {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.store-option input { accent-color: #191e21; }
+.store-option__name { font-weight: 700; }
+.store-option__price { font-size: 0.95rem; }
+
+.store-option__flag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Shipping and order summary */
+.store-shipping {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.store-shipping__select {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+  color: #191e21;
+  background: #fff;
+  border: 1px solid rgba(25, 30, 33, 0.2);
+  border-radius: 4px;
+}
+
+.store-summary {
+  max-width: 420px;
+  margin-top: 0.75rem;
+  border-top: 1px solid rgba(25, 30, 33, 0.15);
+  padding-top: 0.75rem;
+}
+
+.store-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.15rem 0;
+}
+
+.store-summary__row dd {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.store-summary__row--total { font-weight: 800; }
+
+.store-savings {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.store-message {
+  max-width: 420px;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  background: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+}
+
+.store-retry {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.store-qty-btn:disabled { cursor: default; opacity: 0.6; }
+
+/* Receipt */
+.store-receipt {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.store-receipt__items {
+  list-style: none;
+}
+
+.store-receipt__items li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding: 0.5rem 0;
+}
+
+.store-receipt__items .store-preorder { flex-basis: 100%; }
+.store-receipt__back { font-weight: 700; text-decoration: underline; }
 
 /* ========== Responsive ========== */
 @media (max-width: 900px) {

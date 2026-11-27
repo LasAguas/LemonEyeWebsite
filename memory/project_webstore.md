@@ -1,39 +1,31 @@
 ---
 name: project-webstore
-description: Stripe-powered webstore added to the Lemon Eye site — architecture, files, and setup steps
+description: Lemon Eye webstore sold through the Las Aguas dashboard store API: architecture, files and setup
 metadata:
   type: project
 ---
 
-Webstore added to the site using the two cassette product images. Uses Stripe Hosted Checkout via a Vercel serverless function.
+The site's store page renders products from the Las Aguas dashboard store `lemon-eye-store` and sends the buyer to the dashboard's Stripe Checkout. It replaced the site's own Stripe function (`api/checkout.js`, £12 hardcoded) in November 2026.
 
-**Why:** Band wanted to sell the "Out of Reach" limited edition cassette tape directly from their website.
+**Why:** Prices, stock, sales, pre-orders, shipping and orders are managed in one place, and dashboard sales only reach a storefront that reads the dashboard API.
 
-**How to apply:** When working on store or payment features, reference this architecture. The price (£12 in pence = 1200) and product description live in `api/checkout.js` and `src/store.js`.
+**How to apply:** Never hardcode products or prices in the site. Edit them in the dashboard (Admin, then Webstore). See the `las-aguas-webstore` skill for the API contract.
 
 ## Key files
 
-- `store.html` + `src/store.js` — store page (product gallery, quantity picker, checkout button)
-- `api/checkout.js` — Vercel serverless function that creates a Stripe Checkout Session
-- `.env.local` — gitignored local env file (replace placeholder keys with real test keys)
-- `.env.example` — committed template showing what env vars to set
-- `vercel.json` — updated with `outputDirectory: dist` and `framework: vite`
+- `store.html` + `src/store.js`: store page (gallery, options, quantity, shipping choice, checkout, receipt)
+- `src/lib/store-api.js`: API calls and the store slug
+- `src/lib/store-prices.js`: price, sale and date formatting
 
-## Environment variables needed
+## Rules for sales
 
-| Variable | Where | Purpose |
-|---|---|---|
-| `STRIPE_SECRET_KEY` | Vercel + `.env.local` | Server-side Stripe API key |
-| `VITE_STRIPE_PUBLISHABLE_KEY` | Vercel + `.env.local` | Frontend publishable key (optional for now) |
-| `STRIPE_WEBHOOK_SECRET` | Vercel + `.env.local` | Webhook verification (optional) |
+- On sale exactly when `discount` is not null
+- Show `price_cents` and `original_price_cents` as given; never compute from the percentage
 
-## How to test locally
+## Needed before it works live
 
-Use `vercel dev` (not `vite dev`) to run both the static site and the serverless `/api/checkout` function together. Requires Vercel CLI (`npm i -g vercel`).
+1. Products added to the dashboard store, with prices in EUR
+2. Store published
+3. The site's hostname listed in `STORE_RETURN_URL_ALLOWLIST` on the dashboard's Vercel project
 
-## Vercel dashboard steps
-
-1. Go to project Settings → Environment Variables
-2. Add `STRIPE_SECRET_KEY` with the live/test secret key
-3. Add `VITE_STRIPE_PUBLISHABLE_KEY` with the live/test publishable key
-4. Redeploy for env vars to take effect
+The old `STRIPE_*` variables and the `stripe` dependency are no longer used by this site.
